@@ -51,12 +51,16 @@
               </div>
               <input type="text" placeholder="Cerca o inizia una nuova chat">   
             </div>
-            <div class="contacts-thumbs">
 
-              <div class="thumb" v-for="contact in contacts">
-                <img 
-                :src="contact.avatar[counter]" 
-                alt="{{contact.name}}">
+            <div class="thumbs">
+
+              <div class="thumb"     
+                v-for="(contact, index) in contacts"
+                @click="counter = index"
+                
+                :class="{active : index === counter}" 
+              > 
+                <img :src="contact.avatar">
                 <div class="thumb-text">
                   <span>{{contact.name}}</span>
                 </div>
@@ -70,8 +74,9 @@
 
             <div class="user">
               <div class="user-image">
-                <img src="img/avatar_io.jpg" alt="Sofia">
-                <span>Sofia</span>
+                <img src="" alt="">
+                
+                <span>{{}}</span>
               </div>
 
               <div class="icon">
@@ -82,16 +87,20 @@
             </div>
             
             <div class="container-chat">
+
+
+                <div class="message">
+                  <div class="message-text received">
+                    <p>Lorem ipsum dolor si?</p>
+                  </div>
+                </div>
                 
             </div>
 
             <div class="write-message">
-              <i class="fa-solid fa-face-smile"></i>
-
+              <i class="fa-regular fa-face-smile"></i>
               <input type="text" placeholder="Scrivi un messaggio">
-              
               <i class="fa-solid fa-microphone"></i>
-
             </div>
             
           </div>

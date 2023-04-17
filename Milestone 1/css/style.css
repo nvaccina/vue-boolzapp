@@ -11,7 +11,7 @@ body{
 /*MAIN*/
 .main-container{
   height: 100vh;
-  background: linear-gradient(to bottom, #009688, #009688 15%, #DADBD3 15%);
+  background: linear-gradient(to bottom, #009688, #009688 20%, #DADBD3 20%);
 }
 
 /*CONTAINER*/
@@ -20,7 +20,7 @@ body{
   width: 80%;
   max-width: 1200px;
   height: calc(100% - 40px);
-  margin: 20px auto;
+  margin: 0 auto;
 }
 .row{
   display: flex;
@@ -80,6 +80,7 @@ body{
 .text-notifications p:last-child{
   text-decoration: underline;
   opacity: 0.5;
+  cursor: pointer;
 }
 .search-contact{
   display: flex;
@@ -106,7 +107,7 @@ body{
   padding: 0 10px;
   border: none;
 }
-.contacts-thumbs{
+.thumbs{
   height: calc(100% - 170px);
   overflow-y: scroll;
 }
@@ -118,7 +119,7 @@ body{
   cursor: pointer;
   border: 1px solid #F9F9F9;
 }
-.active-contact{
+.active{
   background-color: #E9EBEB;
 }
 .thumb img{
@@ -130,7 +131,31 @@ body{
   background-image: url(../img/mine.jpg);
   height: calc(100% - 110px);
   overflow-y: scroll;
+  padding: 40px;
 }
+.message{
+  display: flex;
+}
+.message-text{
+  padding: 10px;
+  min-width: 150px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+.message.dir-sent{
+  flex-direction: row-reverse;
+}
+.message-text.sent{
+  top: 0;
+  right: 0;
+  background-color: #D5F9BA;
+}
+.message-text.received{
+  top: 0;
+  left: 0;
+  background-color: white;
+}
+
 .write-message{
   display: flex;
   justify-content: space-around;
@@ -139,9 +164,13 @@ body{
   background-color: #F3EEEA;
 }
 .write-message input{
-  width: 70%;
+  width: 80%;
   height: 40px;
   border-radius: 5px;
   border:none;
   padding: 0 10px;
+}
+.write-message i{
+  font-size: 20px;
+  color: #6B7376;
 }
