@@ -9,3 +9,6 @@ Milestone 1 <br>
 - Nella col contact inserire user, attivazione notifiche, barra search e contacts-thumbs con scroll;
 - Creazione db con contacts e collegamento a script.js e html con aggiunta Vuejs cdn;
 -Creazione col per chat;
+- Ciclo v-for lista contatti;
+- Collegamento contacts lista e selezionato;
+- Ciclo v-for per collegare le chat all'utente cliccato;

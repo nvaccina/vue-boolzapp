@@ -9,5 +9,8 @@ createApp({
       contact:'',
     }
   },
+  methods:{
+    
+  }
 
 }).mount('#app')

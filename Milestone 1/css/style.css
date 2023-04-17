@@ -7,9 +7,8 @@
 body{
   font-family: Arial, Helvetica, sans-serif;
 }
-
-.block{
-  display: block;
+i{
+  cursor: pointer;
 }
 /*MAIN*/
 .main-container{
@@ -84,10 +83,11 @@ body{
   color: #8EDAFC;
 }
 .text-notifications{
-  font-size: 12px;
+  font-size: 13px;
 }
 .text-notifications p:last-child{
   text-decoration: underline;
+  font-size: 11px;
   opacity: 0.5;
   cursor: pointer;
 }
@@ -95,7 +95,7 @@ body{
   display: flex;
   align-items: center;
   height: 40px;
-  background-color: white;
+  background-color: #FAFAFA;
   border-radius: 5px;
   border: 1px solid rgb(192, 192, 192);
   margin: 5px;
@@ -108,6 +108,7 @@ body{
   justify-content: center;
   width: 20%;
   height: 100%;
+  background-color: white;
   border-right: 1px solid rgb(192, 192, 192);
 }
 .search-contact input{
@@ -146,20 +147,37 @@ body{
   display: flex;
 }
 .message-text{
-  padding: 10px;
-  min-width: 150px;
+  position: relative;
+  padding: 20px 15px;
+  margin-bottom: 10px;
+  min-width: 250px;
   border-radius: 10px;
   font-size: 12px;
 }
-.message.dir-sent{
+.message-text span{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 10px;
+  opacity: 0.4;
+  margin: 5px 10px;
+}
+.message-text i{
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.4;
+  margin: 5px 10px;
+}
+.dir{
   flex-direction: row-reverse;
 }
-.message-text.sent{
+.sent{
   top: 0;
   right: 0;
   background-color: #D5F9BA;
 }
-.message-text.received{
+.received{
   top: 0;
   left: 0;
   background-color: white;

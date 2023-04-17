@@ -39,7 +39,7 @@
   
               <i class="fa-solid fa-bell-slash bell"></i>
               <div class="text-notifications">
-                <p><strong>Ricevi notifiche di nuovi messaggi</strong></p>
+                <p>Ricevi notifiche di nuovi messaggi</p>
                 <p>Attiva notifiche desktop</p>
               </div>
   
@@ -73,7 +73,7 @@
           <div class="col-8">
 
             <div class="user">
-              
+
               <div class="user-image">
                 <img :src="contacts[counter].avatar" alt="{{contact.name}}">
                 <div class="user-text">
@@ -93,18 +93,23 @@
             <div class="container-chat">
 
 
-                <div class="message" v-for="i in contact.messages">
-                  <div 
-                    class="message-text received"
-                    :class="{'sent': i.status === sent}"
-                    :class="{'received': i.status === received}"
+                <div 
+                  class="message" 
+                  v-for="i in contacts[counter].messages"
+                  :class="{dir : i.status === 'sent'}"
                   >
-
+                  <div 
+                    class="message-text "
+                    :class="`{(i.status === 'sent') ? sent : received}`"
+                    
+                  >
                     <p>{{i.message}}</p>
+                    <i class="fa-solid fa-angle-down"></i>
+                    <span>{{i.date}}</span>
                   </div>
                 </div>
                 
-            </div>
+            </div>            
 
             <div class="write-message">
               <i class="fa-regular fa-face-smile"></i>
