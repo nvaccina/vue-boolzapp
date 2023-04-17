@@ -5,4 +5,5 @@ Milestone 1 <br>
 ●	Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto<br>
 
 ## Steps
-- Creazione del container e della grafica chat, utenti e app;
+- Creazione del main-container con sfondo doppio colore, creazione del container con all'interno row e 2 col, una per contact e una per chat
+- Nella col contact inserire user, attivazione notifiche, barra search e container contacts con scroll
