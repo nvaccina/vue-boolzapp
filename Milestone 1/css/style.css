@@ -8,10 +8,14 @@ body{
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.block{
+  display: block;
+}
 /*MAIN*/
 .main-container{
   height: 100vh;
   background: linear-gradient(to bottom, #009688, #009688 20%, #DADBD3 20%);
+  padding-top: 20px;
 }
 
 /*CONTAINER*/
@@ -19,7 +23,7 @@ body{
   background-color: #EAEAEA;
   width: 80%;
   max-width: 1200px;
-  height: calc(100% - 40px);
+  height: calc(100% - 20px);
   margin: 0 auto;
 }
 .row{
@@ -54,6 +58,11 @@ body{
 .user-image span{
   padding-left: 10px;
   font-size: 14px;
+}
+.user-text p{
+  font-size: 10px;
+  opacity: 0.5;
+  padding-left: 10px;
 }
 .icon i{
   font-size: 20px;
@@ -110,14 +119,14 @@ body{
 .thumbs{
   height: calc(100% - 170px);
   overflow-y: scroll;
+  background-color: white;
 }
 .thumb{
   display: flex;
   align-items: center;
   height:60px;
-  background-color: white;
   cursor: pointer;
-  border: 1px solid #F9F9F9;
+  border-bottom: 1px solid #F9F9F9;
 }
 .active{
   background-color: #E9EBEB;

@@ -54,13 +54,13 @@
 
             <div class="thumbs">
 
-              <div class="thumb"     
+              <div 
+                class="thumb"     
                 v-for="(contact, index) in contacts"
                 @click="counter = index"
-                
                 :class="{active : index === counter}" 
               > 
-                <img :src="contact.avatar">
+                <img :src="contact.avatar" alt="{{contact.name}}">
                 <div class="thumb-text">
                   <span>{{contact.name}}</span>
                 </div>
@@ -73,10 +73,14 @@
           <div class="col-8">
 
             <div class="user">
+              
               <div class="user-image">
-                <img src="" alt="">
+                <img :src="contacts[counter].avatar" alt="{{contact.name}}">
+                <div class="user-text">
+                  <span>{{contacts[counter].name}}</span>
+                  <p>Ultimo accesso oggi alle 12:50</p>
+                </div> 
                 
-                <span>{{}}</span>
               </div>
 
               <div class="icon">
@@ -89,9 +93,14 @@
             <div class="container-chat">
 
 
-                <div class="message">
-                  <div class="message-text received">
-                    <p>Lorem ipsum dolor si?</p>
+                <div class="message" v-for="i in contact.messages">
+                  <div 
+                    class="message-text received"
+                    :class="{'sent': i.status === sent}"
+                    :class="{'received': i.status === received}"
+                  >
+
+                    <p>{{i.message}}</p>
                   </div>
                 </div>
                 
