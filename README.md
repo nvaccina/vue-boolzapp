@@ -6,4 +6,6 @@ Milestone 1 <br>
 
 ## Steps
 - Creazione del main-container con sfondo doppio colore, creazione del container con all'interno row e 2 col, una per contact e una per chat
-- Nella col contact inserire user, attivazione notifiche, barra search e container contacts con scroll
+- Nella col contact inserire user, attivazione notifiche, barra search e contacts-thumbs con scroll;
+- Creazione db con contacts e collegamento a script.js e html con aggiunta Vuejs cdn;
+-Creazione col per chat;
