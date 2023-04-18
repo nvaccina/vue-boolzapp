@@ -14,3 +14,5 @@ Milestone 1 <br>
 - Ciclo v-for per collegare le chat all'utente cliccato;
 - Assegnazione classi ai messaggi differenziati per 'sent' e 'received';
 - Aggiunta funzione che scrivendo un messaggio nell'input mi crea un nuovo messaggio che viene pushato nell'array messages ed è visibile in chat;
+- Creata funzione per assegnare ai nuovi messaggi la data attuale all'invio del messaggio;
+- Aggiunta dell'ultimo messaggio presente in chat e della data al thumb contact;
