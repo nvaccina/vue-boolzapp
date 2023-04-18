@@ -16,7 +16,7 @@ export default [
             },
             {
                 date: '10/01/2020 16:15:22',
-                message: 'Tutto fatto!',
+                message: 'Tutto fatto! Se hai bisogno che faccia altro fammelo sapere.',
                 status: 'received'
             }
         ],

@@ -23,7 +23,6 @@ createApp({
         message: this.newMessageString,
         status: 'sent',
       }
-      console.log(newMessage);
 
       this.contacts[this.counter].messages.push(newMessage);
       this.newMessageString = '';

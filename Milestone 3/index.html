@@ -63,15 +63,14 @@
                 :class="{active : index === counter}" 
               > 
                 <img :src="contact.avatar" alt="{{contact.name}}">
+
                 <div class="thumb-text">
                   <span>{{contact.name}}</span>
-                  <!-- 
-                  <p 
-                    v-for="i in contacts[counter].messages"
-                  >{{i.message}}</p>
-                  -->
 
+                  <p class="message-preview">{{contact.messages[contact.messages.length-1].message}}</p>
                 </div>
+
+                <span class="date-preview">{{contact.messages[contact.messages.length-1].date}}</span>
               </div>
 
             </div>
