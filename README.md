@@ -16,3 +16,4 @@ Milestone 1 <br>
 - Aggiunta funzione che scrivendo un messaggio nell'input mi crea un nuovo messaggio che viene pushato nell'array messages ed è visibile in chat;
 - Creata funzione per assegnare ai nuovi messaggi la data attuale all'invio del messaggio;
 - Aggiunta dell'ultimo messaggio presente in chat e della data al thumb contact;
+- Creata funzione per cercare contatti nella lista thumbs e collegata all'input di ricerca;

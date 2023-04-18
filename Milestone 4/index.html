@@ -51,16 +51,23 @@
               <div class="search">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </div>
-              <input type="text" placeholder="Cerca o inizia una nuova chat">   
+              <input 
+                type="text" 
+                placeholder="Cerca o inizia una nuova chat"
+                id="barra-ricerca"
+                v-model="nomeRicerca"     
+                @keyup="ricerca"
+              >   
+
             </div>
 
             <div class="thumbs">
 
               <div 
-                class="thumb"     
+                class="thumb"
                 v-for="(contact, index) in contacts"
                 @click="counter = index"
-                :class="{active : index === counter}" 
+                :class="{active : index === counter, 'hide' : !contact.visible}" 
               > 
                 <img :src="contact.avatar" alt="{{contact.name}}">
 
@@ -98,7 +105,6 @@
             </div>
             
             <div class="container-chat">
-
 
                 <div 
                   class="message" 
