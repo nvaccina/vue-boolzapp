@@ -11,7 +11,19 @@ createApp({
     }
   },
   methods:{
-    
+    addMessage(){
+
+      const newMessage = {
+        date: '18/04/2023',
+        message: this.newMessageString,
+        status: 'sent',
+      }
+      console.log(newMessage);
+
+      this.contacts[this.counter].messages.push(newMessage);
+      this.newMessageString = '';
+      console.log(contacts);
+    }
   }
 
 }).mount('#app')

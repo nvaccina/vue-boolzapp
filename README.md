@@ -13,3 +13,4 @@ Milestone 1 <br>
 - Collegamento contacts lista e selezionato;
 - Ciclo v-for per collegare le chat all'utente cliccato;
 - Assegnazione classi ai messaggi differenziati per 'sent' e 'received';
+- Aggiunta funzione che scrivendo un messaggio nell'input mi crea un nuovo messaggio che viene pushato nell'array messages ed è visibile in chat;
