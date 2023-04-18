@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Font awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <!--css-->
+  <link rel="stylesheet" href="css/style.css">
+  <!--VueJs cdn-->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  <title>Vue Boolzapp</title>
+</head>
+<body>
+
+  <div id="app">
+    <div class="main-container">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+  
+            <div class="user">
+              <div class="user-image">
+                <img src="img/avatar_io.jpg" alt="Sofia">
+                <span>Sofia</span>
+              </div>
+
+              <div class="icon">
+                <i class="fa-solid fa-circle-notch"></i>
+                <i class="fa-solid fa-message"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </div>
+            </div>
+  
+            <div class="notifications">
+  
+              <i class="fa-solid fa-bell-slash bell"></i>
+              <div class="text-notifications">
+                <p>Ricevi notifiche di nuovi messaggi</p>
+                <p>Attiva notifiche desktop</p>
+              </div>
+  
+            </div>
+  
+            <div class="search-contact">
+              <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <input type="text" placeholder="Cerca o inizia una nuova chat">   
+            </div>
+
+            <div class="thumbs">
+
+              <div 
+                class="thumb"     
+                v-for="(contact, index) in contacts"
+                @click="counter = index"
+                :class="{active : index === counter}" 
+              > 
+                <img :src="contact.avatar" alt="{{contact.name}}">
+                <div class="thumb-text">
+                  <span>{{contact.name}}</span>
+                  <!-- 
+                  <p 
+                    v-for="i in contacts[counter].messages"
+                  >{{i.message}}</p>
+                  -->
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+  
+          <div class="col-8">
+
+            <div class="user">
+
+              <div class="user-image">
+                <img :src="contacts[counter].avatar" alt="{{contact.name}}">
+                <div class="user-text">
+                  <span>{{contacts[counter].name}}</span>
+                  <p>Ultimo accesso oggi alle 12:50</p>
+                </div> 
+                
+              </div>
+
+              <div class="icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-paperclip"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </div>
+            </div>
+            
+            <div class="container-chat">
+
+
+                <div 
+                  class="message" 
+                  v-for="i in contacts[counter].messages"
+                  :class="{dir : i.status === 'sent'}"
+                  >
+                  <div 
+                    class="message-text "
+                    :class="(i.status === 'sent') ? 'sent' : 'received'"
+                    
+                  >
+                    <p>{{i.message}}</p>
+                    <i class="fa-solid fa-angle-down"></i>
+                    <span>{{i.date}}</span>
+                  </div>
+                </div>
+                
+            </div>            
+
+            <div class="write-message">
+              <i class="fa-regular fa-face-smile"></i>
+
+              <input 
+                
+                type="text" 
+                placeholder="Scrivi un messaggio">
+
+              <i class="fa-solid fa-microphone"></i>
+            </div>
+            
+          </div>
+        </div>
+  
+      </div>
+  
+    </div>
+
+  </div>
+
+  
+
+  <script type="module" src="js/script.js"></script>  
+</body>
+</html>

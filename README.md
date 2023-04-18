@@ -12,3 +12,4 @@ Milestone 1 <br>
 - Ciclo v-for lista contatti;
 - Collegamento contacts lista e selezionato;
 - Ciclo v-for per collegare le chat all'utente cliccato;
+- Assegnazione classi ai messaggi differenziati per 'sent' e 'received';
