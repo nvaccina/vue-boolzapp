@@ -37,31 +37,45 @@
               </div>
             </div>
   
-            <div class="notifications">
-  
-              <i class="fa-solid fa-bell-slash bell"></i>
-              <div class="text-notifications">
-                <p>Ricevi notifiche di nuovi messaggi</p>
-                <p>Attiva notifiche desktop</p>
+            <div class="notifications" 
+            :class="{hide : !deletNotifications}">
+
+              <div class="active-notificatios">
+                <i class="fa-solid fa-bell-slash bell"></i>
+                <div class="text-notifications">
+                  <p>Ricevi notifiche di nuovi messaggi</p>
+                  <a href="#">Attiva notifiche desktop</a>
+                </div>
+              </div>
+
+              <div class="cross">
+                <i 
+                  class="fa-solid fa-xmark" 
+                  @click="deletNotifications = !deletNotifications"
+                  
+                ></i>
               </div>
   
             </div>
   
             <div class="search-contact">
               <div class="search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </div>
-              <input 
+                <div class="search-icon">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <input 
                 type="text" 
                 placeholder="Cerca o inizia una nuova chat"
                 id="barra-ricerca"
                 v-model="nomeRicerca"     
                 @keyup="ricerca"
-              >   
+                >  
+              </div>
+               
 
             </div>
 
-            <div class="thumbs">
+            <div class="thumbs" :class="{maxHeightThumbs : !deletNotifications}">
 
               <div 
                 class="thumb"

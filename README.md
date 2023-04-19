@@ -10,7 +10,7 @@ Milestone 1 <br>
 - Creazione db con contacts e collegamento a script.js e html con aggiunta Vuejs cdn;
 -Creazione col per chat;
 - Ciclo v-for lista contatti;
-- Collegamento contacts lista e selezionato;
+- Collegamento contacts list e contatto selezionato con data ultimo accesso = a data ultimo suo messaggio inviato;
 - Ciclo v-for per collegare le chat all'utente cliccato;
 - Assegnazione classi ai messaggi differenziati per 'sent' e 'received';
 - Aggiunta funzione che scrivendo un messaggio nell'input mi crea un nuovo messaggio che viene pushato nell'array messages ed è visibile in chat;
