@@ -21,4 +21,4 @@ Milestone 1 <br>
 - Aggiunto menu a tendita nel messaggio;
 - Bonus, creata funzione per eliminare ogni singolo messaggio dal menu a tendina;
 - Aggiunta opzione messaggio preferito;
-- Aggiunta barra di ricerca messaggi all'interno della chat;
+- Aggiunta barra di ricerca messaggi all'interno della chat al click della lente di ingrandimento;

@@ -71,8 +71,6 @@ createApp({
         this.messages.splice(index,1)
       }
     },
-
-    
   },
 
 }).mount('#app')

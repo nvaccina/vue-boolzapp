@@ -125,19 +125,22 @@
 
               <div class="icon">
                 <div class="cerca-messaggi">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-
                   <input 
                   type="text" 
                   placeholder="Cerca messaggi"
                   id="barra-ricerca-messaggi"
+                  :class="{'block' : !important}"
                   v-model="messaggioRicerca"     
                   @keyup="ricercaMessaggio"
+                  
                   >  
                   
+                  <i 
+                    class="fa-solid fa-magnifying-glass"
+                    @click="important = !important"
+                  ></i>                  
                 </div>
                 
-
                 <i class="fa-solid fa-paperclip"></i>
 
                 <div class="dropdown-icon">
