@@ -192,11 +192,16 @@ i{
 }
 .message-text{
   position: relative;
-  padding: 20px 15px;
+  padding: 20px 10px;
   margin-bottom: 10px;
   min-width: 250px;
   border-radius: 10px;
   font-size: 12px;
+}
+.icon-message-menu{
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 .message-text span{
   position: absolute;
@@ -204,15 +209,9 @@ i{
   right: 0;
   font-size: 9px;
   opacity: 0.4;
-  margin: 5px 10px;
+  margin: 10px 10px 5px;
 }
-.message-text i{
-  position: absolute;
-  top: 0;
-  right: 0;
-  opacity: 0.4;
-  margin: 5px 10px;
-}
+
 .dir{
   flex-direction: row-reverse;
 }
@@ -226,7 +225,52 @@ i{
   left: 0;
   background-color: white;
 }
+/*Dropdown-menu*/
+.dropdown{
+  position: relative;
+  height: 15px;
+  overflow: hidden;
+}
+.dropdown i{
+  opacity: 0.4;
+}
+.dropdown-menu{
+  position: absolute;
+  top: 15px;
+  right: 0;
+  z-index: 1;
+  width: 130px;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.dropdown-menu li{
+  list-style: none;
+  text-align: left;
+  padding: 10px;
+}
+.dropdown-menu li a{
+  text-decoration: none;
+  color: black;
+}
+.dropdown:hover .dropdown-menu{
+  right: 0;
+  top: 15px;
+  opacity: 1;
+}
+.dropdown:hover{
+  overflow: visible;
+}
+.dropdown .dropdown-menu li{
+  cursor: pointer;
+}
+.dropdown .dropdown-menu li:hover{
+  background-color: #ECEBEA;
+}
 
+
+/*Barra per scrivere messaggi*/
 .write-message{
   display: flex;
   justify-content: space-around;

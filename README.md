@@ -17,3 +17,5 @@ Milestone 1 <br>
 - Creata funzione per assegnare ai nuovi messaggi la data attuale all'invio del messaggio;
 - Aggiunta dell'ultimo messaggio presente in chat e della data al thumb contact;
 - Creata funzione per cercare contatti nella lista thumbs e collegata all'input di ricerca;
+- Aggiunta della 'X' per chiudere finestra di attivazione notifiche;
+- Aggiunta menu a tendita nel messaggio;
