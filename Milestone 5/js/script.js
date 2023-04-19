@@ -12,6 +12,7 @@ createApp({
       newMessageString:'',
       nomeRicerca:'',
       deletNotifications: true,
+      mostraMessaggio: true,
     }
   },
   methods:{
@@ -61,6 +62,14 @@ createApp({
         }
       }
     },
+
+    //Funzione per eliminare i messaggi
+    deleteMessage(index){
+      if(this.contacts[counter].messages[index].mostraMessaggio){
+        this.messages.splice(index,1)
+      }
+    },
+    
   },
 
 }).mount('#app')

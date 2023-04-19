@@ -81,7 +81,7 @@
                 class="thumb"
                 v-for="(contact, index) in contacts"
                 @click="counter = index"
-                :class="{active : index === counter, 'hide' : !contact.visible}" 
+                :class="{active : index === counter, hide : !contact.visible}" 
               > 
                 <img :src="contact.avatar" alt="{{contact.name}}">
 
@@ -122,8 +122,9 @@
 
                 <div 
                   class="message" 
-                  v-for="i in contacts[counter].messages"
-                  :class="{dir : i.status === 'sent'}"
+                  v-for="(i, index) in contacts[counter].messages"
+                  :class="{dir : i.status === 'sent', 
+                  hide : i.mostraMessaggio}"
                   >
                   <div 
                     class="message-text "
@@ -138,7 +139,9 @@
   
                         <ul class="dropdown-menu">
                           <li><a href="#">Message info</a></li>
-                          <li><a href="#">Delete message</a></li>
+                          <li 
+                            @click="i.mostraMessaggio = !i.mostraMessaggio"
+                          ><a href="#">Delete message</a></li>
                         </ul>
                       </div>
 

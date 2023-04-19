@@ -181,6 +181,7 @@ i{
   opacity: 0.3;
   padding: 5px;
 }
+/*Chat*/
 .container-chat{
   background-image: url(../img/mine.jpg);
   height: calc(100% - 110px);
@@ -211,7 +212,6 @@ i{
   opacity: 0.4;
   margin: 10px 10px 5px;
 }
-
 .dir{
   flex-direction: row-reverse;
 }
@@ -268,7 +268,6 @@ i{
 .dropdown .dropdown-menu li:hover{
   background-color: #ECEBEA;
 }
-
 
 /*Barra per scrivere messaggi*/
 .write-message{

@@ -18,4 +18,5 @@ Milestone 1 <br>
 - Aggiunta dell'ultimo messaggio presente in chat e della data al thumb contact;
 - Creata funzione per cercare contatti nella lista thumbs e collegata all'input di ricerca;
 - Aggiunta della 'X' per chiudere finestra di attivazione notifiche;
-- Aggiunta menu a tendita nel messaggio;
+- Aggiunto menu a tendita nel messaggio;
+- Bonus, creata funzione per eliminare ogni singolo messaggio dal menu a tendina;
