@@ -13,6 +13,9 @@ i{
 .hide{
   display: none !important;
 }
+.block{
+  display: block !important;
+}
 /*MAIN*/
 .main-container{
   height: 100vh;
@@ -67,11 +70,57 @@ i{
   opacity: 0.5;
   padding-left: 10px;
 }
+.icon{
+  display: flex;
+  align-items: center;
+}
 .icon i{
   font-size: 20px;
   color: #B1B1B1;
   padding-right: 20px;
 }
+/*Dropdown-menu-icon*/
+.dropdown-icon{
+  position: relative;
+  overflow: hidden;
+}
+.dropdown-menu-icon{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  width: 150px;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: all 0.5s;
+  padding: 10px 0;
+}
+.dropdown-menu-icon li{
+  list-style: none;
+  text-align: left;
+  font-size: 12px;
+  padding: 10px;
+}
+.dropdown-menu-icon li a{
+  text-decoration: none;
+  color: black;
+}
+.dropdown-icon:hover .dropdown-menu-icon{
+  top: 20px;
+  right: 20px;
+  opacity: 1;
+}
+.dropdown-icon:hover{
+  overflow: visible;
+}
+.dropdown-icon .dropdown-menu-icon li{
+  cursor: pointer;
+}
+.dropdown-icon .dropdown-menu-icon li:hover{
+  background-color: #ECEBEA;
+}
+/*Attiva notifiche*/
 .notifications{
   display: flex;
   justify-content: space-between;
@@ -188,12 +237,31 @@ i{
   overflow-y: scroll;
   padding: 40px;
 }
+.cerca-messaggi{
+  position: relative;
+}
+.cerca-messaggi input{
+  position: absolute;
+
+  right: 40px;
+  z-index: 2;
+  width: 150px;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.cerca-messaggi i:hover .cerca-messaggi input{
+  right: 0;
+  top: 0;
+  opacity: 1;
+}
 .message{
   display: flex;
 }
 .message-text{
   position: relative;
-  padding: 20px 10px;
+  padding: 20px 10px 25px;
   margin-bottom: 10px;
   min-width: 250px;
   border-radius: 10px;
@@ -204,7 +272,15 @@ i{
   top: 10px;
   right: 10px;
 }
-.message-text span{
+.message-text span i{
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  font-size: 9px;
+  display: none;
+  color: yellow;
+}
+.message-text span:last-child{
   position: absolute;
   bottom: 0;
   right: 0;
@@ -228,18 +304,17 @@ i{
 /*Dropdown-menu*/
 .dropdown{
   position: relative;
-  height: 15px;
   overflow: hidden;
 }
 .dropdown i{
-  opacity: 0.4;
+  opacity: 0.5;
 }
 .dropdown-menu{
   position: absolute;
   top: 15px;
   right: 0;
   z-index: 1;
-  width: 130px;
+  width: 150px;
   background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   opacity: 0;

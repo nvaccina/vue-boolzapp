@@ -11,8 +11,10 @@ createApp({
       clock:'',
       newMessageString:'',
       nomeRicerca:'',
+      messaggioRicerca:'',
       deletNotifications: true,
       mostraMessaggio: true,
+      important: true,
     }
   },
   methods:{
@@ -69,6 +71,7 @@ createApp({
         this.messages.splice(index,1)
       }
     },
+
     
   },
 
