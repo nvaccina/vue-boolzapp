@@ -67,8 +67,8 @@ createApp({
 
     //Funzione per eliminare i messaggi
     deleteMessage(index){
-      if(this.contacts[counter].messages[index].mostraMessaggio){
-        this.messages.splice(index,1)
+      if(this.contacts[this.counter].messages[index].mostraMessaggio){
+        this.contacts[this.counter].messages.splice(index,1)
       }
     },
   },

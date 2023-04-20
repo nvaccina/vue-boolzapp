@@ -130,11 +130,7 @@
                   placeholder="Cerca messaggi"
                   id="barra-ricerca-messaggi"
                   :class="{'block' : !important}"
-                  v-model="messaggioRicerca"     
-                  @keyup="ricercaMessaggio"
-                  
                   >  
-                  
                   <i 
                     class="fa-solid fa-magnifying-glass"
                     @click="important = !important"
@@ -166,8 +162,7 @@
                 <div 
                   class="message" 
                   v-for="(i, index) in contacts[counter].messages"
-                  :class="{dir : i.status === 'sent', 
-                  hide : i.mostraMessaggio}"
+                  :class="{dir : i.status === 'sent'}"
                   >
                   <div 
                     class="message-text "
@@ -187,6 +182,8 @@
                           ><a href="#">Messaggio importante</a></li>
                           <li 
                             @click="i.mostraMessaggio = !i.mostraMessaggio"
+                            @click.stop="deleteMessage(index)"
+
                           ><a href="#">Delete message</a></li>
                         </ul>
                       </div>
