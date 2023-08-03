@@ -42,6 +42,7 @@ createApp({
         message: 'Si, hai proprio ragione',
         status: 'received',
       }
+      showNotification();
       this.contacts[this.counter].messages.push(newAnswerMessage);
     },
 
@@ -74,3 +75,19 @@ createApp({
   },
 
 }).mount('#app')
+
+function showNotification(message) {
+  Notification.requestPermission().then(function (permission) {
+    if (permission === "granted") {
+      const options = {
+        body: "Esempio di notifica personalizzata con immagine",
+        icon: "path/to/logo.png",
+        image: "path/to/image.png"
+      };
+      const notification = new Notification("Titolo della notifica", options);
+      notification.onclick = function () {
+        console.log("La notifica è stata cliccata");
+      };
+    }
+  });
+}
